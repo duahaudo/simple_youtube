@@ -1,13 +1,14 @@
-import {color_white, color_grey1} from './../../style';
-import {StyleSheet} from 'react-native';
-import {color_primary} from '../../style';
+import { color_secondary, text_primary, text_secondary } from './../../style';
+import { StyleSheet } from 'react-native';
+import { color_primary } from '../../style';
 
 export default StyleSheet.create({
   container: {
-    backgroundColor: color_primary,
+    // backgroundColor: color_secondary,
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
+
   },
   icons: {
     flex: 1,
@@ -16,9 +17,13 @@ export default StyleSheet.create({
     opacity: 1,
   },
   icon: {
-    color: color_grey1,
+    color: text_secondary
+  },
+  title: {
+    marginTop: 3,
+    fontSize: 12
   },
   active: {
-    color: color_white,
+    color: text_primary,
   },
 });

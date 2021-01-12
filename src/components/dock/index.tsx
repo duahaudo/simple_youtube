@@ -1,7 +1,7 @@
 import React from 'react';
-import {View, Pressable} from 'react-native';
-import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
-import {faStar, faCog, faHeart} from '@fortawesome/free-solid-svg-icons';
+import { View, Pressable, Text } from 'react-native';
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+import { faStar, faCog, faHeart } from '@fortawesome/free-solid-svg-icons';
 import styles from './style';
 
 import {
@@ -14,14 +14,15 @@ import {
 interface IIcon {
   icon: any;
   view: number;
+  title: string
 }
 
 export default () => {
   const icons = React.useMemo<IIcon[]>(
     () => [
-      {icon: faHeart, view: VIEW_FAVOURITE},
-      {icon: faStar, view: VIEW_TRENDING},
-      {icon: faCog, view: VIEW_CONFIG},
+      { icon: faStar, view: VIEW_TRENDING, title: "Most Popular" },
+      { icon: faHeart, view: VIEW_FAVOURITE, title: "Favourite" },
+      { icon: faCog, view: VIEW_CONFIG, title: "Setting" },
     ],
     [],
   );
@@ -52,7 +53,8 @@ export default () => {
               context.setShowOverlay(false);
               context.setShowReload(false);
             }}>
-            <FontAwesomeIcon icon={icon.icon} style={style} size={25} />
+            <FontAwesomeIcon icon={icon.icon} style={style} size={20} />
+            <Text style={[style, styles.title]}>{icon.title}</Text>
           </Pressable>
         );
       })}

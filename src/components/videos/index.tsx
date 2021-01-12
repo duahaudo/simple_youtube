@@ -1,6 +1,6 @@
 import React from 'react';
-import {useState} from 'react';
-import {View} from 'react-native';
+import { useState } from 'react';
+import { View } from 'react-native';
 import {
   Pressable,
   ScrollView,
@@ -10,19 +10,19 @@ import {
   SafeAreaView,
   RefreshControl,
 } from 'react-native';
-import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
-import {faHeart} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import styles from './style';
-import {FormContext, asyncStorageKey_favourite} from '../../constant';
-import {color_grey1, color_primary} from '../../style';
-import {defaultStyle} from '../../style';
-import {reject} from 'lodash';
-import {decode} from 'html-entities';
+import { FormContext, asyncStorageKey_favourite } from '../../constant';
+import { text_primary, text_secondary, color_pink, color_pink1 } from '../../style';
+import { defaultStyle } from '../../style';
+import { reject } from 'lodash';
+import { decode } from 'html-entities';
 
 import Youtube from '../youtubeModal';
 import Dock from '../dock';
 
-import {useSaveItem, IAsyncStorageItem} from '../../hooks/useAsyncStorage';
+import { useSaveItem, IAsyncStorageItem } from '../../hooks/useAsyncStorage';
 
 export default ({
   options,
@@ -59,7 +59,7 @@ export default ({
   const setFavouritesHandler = React.useCallback(
     (option: any) => {
       // @ts-ignore
-      const {setfavourites} = context;
+      const { setfavourites } = context;
       let favourites = context.favourites ? context.favourites : [];
       const isExist = favourites.find(
         (vid: any) => vid.videoId === option.videoId,
@@ -120,7 +120,7 @@ export default ({
               <View style={styles.thumbnailWrapper}>
                 <Image
                   style={styles.thumbnail}
-                  source={{uri: option.thumbnail.url}}
+                  source={{ uri: option.thumbnail.url }}
                 />
               </View>
               <View style={optionItemStyles}>
@@ -131,7 +131,7 @@ export default ({
                       <FontAwesomeIcon
                         icon={faHeart}
                         size={18}
-                        color={isExist ? color_primary : color_grey1}
+                        color={isExist ? color_pink : text_secondary}
                       />
                     </Pressable>
                   )}

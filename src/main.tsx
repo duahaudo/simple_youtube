@@ -11,7 +11,7 @@ import {
   VIEW_CONFIG,
   maxResults,
 } from './constant';
-import { color_primary, color_white, dockHeight, titleHeight } from './style';
+import { color_secondary, color_primary, dockHeight, titleHeight } from './style';
 import SplashScreen from 'react-native-splash-screen';
 
 import Home from './pages/home';
@@ -24,6 +24,7 @@ import Dock from './components/dock';
 
 import { useReadItem } from './hooks/useAsyncStorage';
 import { ISetting } from './interface';
+import { Appearance } from 'react-native'
 
 // console.log(SplashScreen)
 
@@ -55,6 +56,8 @@ export default function App() {
 
   React.useEffect(() => {
     SplashScreen.hide();
+
+    console.log(Appearance.getColorScheme())
   }, [])
 
   return (
@@ -100,7 +103,7 @@ const styles = StyleSheet.create({
   },
   workSpace: {
     flexGrow: 1,
-    backgroundColor: color_white,
+    backgroundColor: color_secondary,
   },
   dock: {
     height: dockHeight,

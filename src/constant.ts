@@ -13,5 +13,6 @@ export const youtube_key = 'AIzaSyBw8vuvTucv0HYaeEjlOL78YAMYDD_AyAM';
 export const asyncStorageKey_favourite = 'asyncStorageKey_favourite';
 export const asyncStorageKey_trending = 'asyncStorageKey_trending';
 export const asyncStorageKey_setting = 'asyncStorageKey_setting';
+export const asyncStorageKey_region = 'asyncStorageKey_region';
 
 export const maxResults = 25;

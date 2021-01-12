@@ -1,10 +1,10 @@
 import React from 'react';
-import {View, Text, ScrollView, Alert, AlertButton} from 'react-native';
+import { View, Text, ScrollView, Alert, AlertButton } from 'react-native';
 import styles from './style';
 import YoutubePlayer from 'react-native-youtube-iframe';
-import {decode} from 'html-entities';
+import { decode } from 'html-entities';
 
-export default ({video, clearVideoId}: any) => {
+export default ({ video, clearVideoId }: any) => {
   const showAlert = (error: string) => {
     const title = 'Something wrong happen.';
     const buttons: AlertButton[] = [
@@ -77,7 +77,7 @@ export default ({video, clearVideoId}: any) => {
             />
           </View>
           <ScrollView style={styles.description}>
-            <Text>{decode(video.description)}</Text>
+            <Text style={styles.descriptionText}>{decode(video.description)}</Text>
           </ScrollView>
         </View>
       </View>

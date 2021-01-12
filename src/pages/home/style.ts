@@ -1,6 +1,6 @@
-import {mVal, buttonFontSize} from './../../style';
-import {StyleSheet} from 'react-native';
-import {color_primary, color_grey1, color_white} from '../../style';
+import { mVal, buttonFontSize } from './../../style';
+import { StyleSheet } from 'react-native';
+import { color_grey1, color_grey, color_white } from '../../style';
 
 export default StyleSheet.create({
   container: {
@@ -14,7 +14,7 @@ export default StyleSheet.create({
     flexGrow: 0,
   },
   buttonWrapper: {
-    backgroundColor: color_primary,
+    backgroundColor: color_grey,
     borderRadius: 5,
     marginTop: 10,
     paddingVertical: 5,

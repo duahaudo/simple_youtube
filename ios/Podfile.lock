@@ -302,6 +302,8 @@ PODS:
     - React-jsi (= 0.63.4)
   - RNCAsyncStorage (1.13.2):
     - React
+  - RNLocalize (2.0.1):
+    - React-Core
   - RNSVG (12.1.0):
     - React
   - Yoga (1.14.0)
@@ -358,6 +360,7 @@ DEPENDENCIES:
   - React-RCTVibration (from `../node_modules/react-native/Libraries/Vibration`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - "RNCAsyncStorage (from `../node_modules/@react-native-async-storage/async-storage`)"
+  - RNLocalize (from `../node_modules/react-native-localize`)
   - RNSVG (from `../node_modules/react-native-svg`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
@@ -433,6 +436,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon"
   RNCAsyncStorage:
     :path: "../node_modules/@react-native-async-storage/async-storage"
+  RNLocalize:
+    :path: "../node_modules/react-native-localize"
   RNSVG:
     :path: "../node_modules/react-native-svg"
   Yoga:
@@ -478,6 +483,7 @@ SPEC CHECKSUMS:
   React-RCTVibration: ae4f914cfe8de7d4de95ae1ea6cc8f6315d73d9d
   ReactCommon: 73d79c7039f473b76db6ff7c6b159c478acbbb3b
   RNCAsyncStorage: 05bae7ecfab1cbd5441993f1ca098f7c3b3f8d0e
+  RNLocalize: 41026b7c14878f1a1b381bc79f668f1fbf841adb
   RNSVG: ce9d996113475209013317e48b05c21ee988d42e
   Yoga: 4bd86afe9883422a7c4028c00e34790f560923d6
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a

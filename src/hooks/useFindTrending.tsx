@@ -1,11 +1,13 @@
-import React, {useEffect} from 'react';
-import {useState} from 'react';
+import React, { useEffect } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
-import {youtube_key, maxResults, asyncStorageKey_trending} from '../constant';
-import {useSaveItem, useReadItem, IAsyncStorageItem} from './useAsyncStorage';
-import {SettingContext} from '../constant';
+import { NativeModules } from "react-native"
+import { youtube_key, maxResults, asyncStorageKey_trending } from '../constant';
+import { useSaveItem, useReadItem, IAsyncStorageItem } from './useAsyncStorage';
+import { SettingContext } from '../constant';
 import moment from 'moment';
-import {IContextSetting} from '../interface';
+import { IContextSetting } from '../interface';
+import * as RNLocalize from "react-native-localize";
 
 interface IResponse {
   success: boolean;
@@ -14,7 +16,7 @@ interface IResponse {
 }
 
 export default (needReload: boolean = false) => {
-  const {setting} = React.useContext(SettingContext) as IContextSetting;
+  const { setting } = React.useContext(SettingContext) as IContextSetting;
 
   const [loading, setLoading] = useState<boolean>(false);
   const [fetchedData, setFetchedData] = useState<IResponse | null>(null);
@@ -27,6 +29,8 @@ export default (needReload: boolean = false) => {
   // hook to save data
   useSaveItem(asyncStorageItem);
 
+  
+
   useEffect(() => {
     if (isLoaded || needReload) {
       if (
@@ -38,6 +42,8 @@ export default (needReload: boolean = false) => {
       ) {
         setLoading(true);
         console.log('Query data ...');
+        console.log('RNLocalize.getLocales()', RNLocalize.getCountry())
+
         axios({
           method: 'GET',
           url: 'https://www.googleapis.com/youtube/v3/videos',
@@ -47,7 +53,7 @@ export default (needReload: boolean = false) => {
             kind: 'youtube#videoListResponse',
             maxResults: setting ? setting.maxResults || maxResults : maxResults,
             type: 'video',
-            regionCode: 'VN',
+            regionCode: RNLocalize.getCountry(),
             key: youtube_key,
           },
           headers: {
@@ -57,7 +63,7 @@ export default (needReload: boolean = false) => {
           .then((res) => {
             setLoading(false);
             const trendingData = res.data.items.map((item: any) => {
-              const {snippet, id} = item;
+              const { snippet, id } = item;
               return {
                 videoId: id,
                 thumbnail: snippet.thumbnails.default,

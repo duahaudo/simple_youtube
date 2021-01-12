@@ -1,9 +1,8 @@
-import {StyleSheet} from 'react-native';
-import {color_primary, color_white, padVal} from '../../style';
+import { StyleSheet } from 'react-native';
+import { color_primary, color_white, padVal, text_primary, text_secondary, color_secondary } from '../../style';
 
 export default StyleSheet.create({
   container: {
-    // backgroundColor: color_black,
     flex: 1,
   },
   webViewContainer: {
@@ -17,19 +16,20 @@ export default StyleSheet.create({
     height: 250,
   },
   title: {
-    backgroundColor: color_primary,
+    backgroundColor: color_secondary,
     paddingVertical: 10,
     paddingHorizontal: 20,
-    // borderTopStartRadius: 20,
-    // borderTopEndRadius: 20,
+    borderTopStartRadius: 20,
+    borderTopEndRadius: 20,
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
   closeText: {
-    color: '#fff',
+    color: text_secondary,
   },
   titleText: {
     flex: 0.8,
+    color: text_primary
   },
   topHeader: {
     marginTop: 25,
@@ -42,5 +42,9 @@ export default StyleSheet.create({
   },
   description: {
     padding: padVal,
+    backgroundColor: color_secondary
   },
+  descriptionText: {
+    color: text_secondary
+  }
 });

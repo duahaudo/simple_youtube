@@ -1,16 +1,16 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 import {
   color_primary,
   primaryFontSize,
   color_white,
   padVal,
   titleHeight,
+  text_primary
 } from '../../style';
 
 export default StyleSheet.create({
   headerWrapper: {
-    backgroundColor: color_primary,
-    color: color_white,
+    // backgroundColor: color_primary
   },
   container: {
     flex: 1,
@@ -21,7 +21,7 @@ export default StyleSheet.create({
     // marginTop: 10
   },
   titleText: {
-    color: color_white,
+    color: text_primary,
     fontSize: primaryFontSize,
     fontWeight: '500',
   },
@@ -51,6 +51,6 @@ export default StyleSheet.create({
     // backgroundColor: "#000"
   },
   icon: {
-    color: color_white,
+    color: text_primary,
   },
 });

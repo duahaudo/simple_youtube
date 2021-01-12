@@ -1,7 +1,9 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet, Appearance } from 'react-native';
 import {
+  color_black,
   color_white,
   color_primary,
+  color_secondary,
   color_grey1,
   color_grey,
   dockHeight,
@@ -19,7 +21,7 @@ export default StyleSheet.create({
     flex: 0.3,
     padding: padVal,
     paddingLeft: 0,
-    backgroundColor: color_white,
+    backgroundColor: color_secondary,
   },
   thumbnail: {
     backgroundColor: color_primary,
@@ -45,6 +47,7 @@ export default StyleSheet.create({
   },
   optionItemText: {
     fontSize: primaryFontSize,
+    color: Appearance.getColorScheme() === "light" ? color_black : color_white
   },
   optionDescription: {
     marginTop: mVal,
