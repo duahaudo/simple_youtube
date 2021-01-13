@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { View, Text, Image, Pressable, StatusBar } from 'react-native';
-import { color_primary } from "../../style";
+import { color_primary, color_secondary, text_primary, text_secondary } from "../../style";
 import { Appearance } from 'react-native'
 
 import {
@@ -27,6 +27,21 @@ export default () => {
     return 'default'
   }, [])
 
+  const [breadcrumbs, setBreadcrumbs] = React.useState<string[]>([])
+
+  const searchIconPressHandler = React.useCallback(() => {
+    console.log(breadcrumbs)
+
+    if (view === VIEW_HOME) {
+      setView(breadcrumbs[0])
+      setBreadcrumbs([])
+    } else {
+      setBreadcrumbs([view])
+      setView(VIEW_HOME)
+    }
+
+  }, [breadcrumbs, view])
+
   return (
     <View style={styles.headerWrapper}>
       <StatusBar barStyle={barStyle} backgroundColor={color_primary} />
@@ -43,8 +58,8 @@ export default () => {
           </Text>
           <Pressable
             style={styles.searchWrapper}
-            onPress={() => setView(VIEW_HOME)}>
-            <FontAwesomeIcon icon={faSearch} style={styles.icon} size={20} />
+            onPress={searchIconPressHandler}>
+            <FontAwesomeIcon icon={faSearch} style={{ ...styles.icon, color: view === VIEW_HOME ? text_primary : text_secondary }} size={20} />
           </Pressable>
         </View>
       </View>

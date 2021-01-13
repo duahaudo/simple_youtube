@@ -33,8 +33,8 @@ export default () => {
       style={styles.containerWrapper}>
       <View style={styles.container}>
         <View style={styles.maxQuery}>
-          <View style={[defaultStyle.textCaption, styles.captionInput]}>
-            <Text style={[]}>Number of videos display</Text>
+          <View style={[styles.captionInput]}>
+            <Text style={[defaultStyle.textCaption]}>Number of videos display</Text>
             <Text style={styles.description}>(0 ~ 99)</Text>
           </View>
           <TextInput

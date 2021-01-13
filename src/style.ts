@@ -1,4 +1,3 @@
-import { faRubleSign } from '@fortawesome/free-solid-svg-icons';
 import { StyleSheet, Appearance } from 'react-native';
 
 export const color_black = '#000';
@@ -46,9 +45,11 @@ export const defaultStyle = StyleSheet.create({
     borderWidth: 1,
     borderColor: color_grey,
     borderRadius: 5,
-    // backgroundColor: Appearance.getColorScheme() === "light" ? color_white : color_secondary
+    backgroundColor: Appearance.getColorScheme() === "light" ? color_white : 'rgb(37,31,41)',
+    color: Appearance.getColorScheme() === "light" ? color_black : color_white,
   },
   textCaption: {
     // marginVertical: 10
+    color: Appearance.getColorScheme() === "light" ? text_primary : text_secondary
   },
 });

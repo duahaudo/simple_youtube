@@ -124,22 +124,31 @@ export default ({
                 />
               </View>
               <View style={optionItemStyles}>
-                <Text style={styles.optionItemText}>
-                  {decode(option.title)}{' '}
-                  {showFavourite && (
-                    <Pressable onPress={() => setFavouritesHandler(option)}>
-                      <FontAwesomeIcon
-                        icon={faHeart}
-                        size={18}
-                        color={isExist ? color_pink : text_secondary}
-                      />
-                    </Pressable>
-                  )}
-                </Text>
+                <View style={styles.videoTitleWrapper}>
+                  <View style={styles.videoTitle}>
+                    <Text style={styles.optionItemText}>
+                      {decode(option.title)}{' '}
+
+                    </Text>
+                  </View>
+
+                </View>
                 <Text style={styles.optionDescription}>
                   {decode(option.description)}
                 </Text>
               </View>
+              {showFavourite && (
+                <Pressable style={styles.videoFavourite} onPress={() => setFavouritesHandler(option)}>
+                  <View style={styles.videoFavourite}>
+                    <FontAwesomeIcon
+                      icon={faHeart}
+                      size={18}
+                      color={isExist ? color_pink : text_secondary}
+                    />
+                  </View>
+                </Pressable>
+
+              )}
             </View>
           </Pressable>
         );

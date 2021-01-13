@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, { useRef, useState } from 'react';
 import {
   Text,
   View,
@@ -7,11 +7,11 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import styles from './style';
-import {defaultStyle} from '../../style';
+import { defaultStyle } from '../../style';
 import Videos from '../../components/videos';
 
 import useSearch from '../../hooks/useSearch';
-import {useEffect} from 'react';
+import { useEffect } from 'react';
 
 export default function App() {
   const inputRef = useRef(null);
@@ -61,7 +61,7 @@ export default function App() {
               setFilter(text);
             }}
           />
-          <TouchableOpacity
+          {/* <TouchableOpacity
             style={styles.buttonWrapper}
             onPress={() => {
               setQueryFilter(filter);
@@ -84,7 +84,7 @@ export default function App() {
                 />
               )}
             </View>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
         </View>
       )}
 
