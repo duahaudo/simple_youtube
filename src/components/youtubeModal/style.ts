@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { color_primary, color_white, padVal, text_primary, text_secondary, color_secondary } from '../../style';
+import { color_primary, color_black, padVal, text_primary, text_secondary, color_secondary } from '../../style';
 
 export default StyleSheet.create({
   container: {
@@ -9,7 +9,7 @@ export default StyleSheet.create({
     flex: 1,
   },
   playerContainer: {
-    backgroundColor: color_white,
+    backgroundColor: color_secondary,
     flex: 1,
   },
   webView: {
@@ -29,7 +29,7 @@ export default StyleSheet.create({
   },
   titleText: {
     flex: 0.8,
-    color: text_primary
+    color: color_black
   },
   topHeader: {
     marginTop: 25,
@@ -42,7 +42,8 @@ export default StyleSheet.create({
   },
   description: {
     padding: padVal,
-    backgroundColor: color_secondary
+    paddingTop: 0
+    // backgroundColor: color_secondary
   },
   descriptionText: {
     color: text_secondary

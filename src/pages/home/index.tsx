@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import styles from './style';
-import { defaultStyle } from '../../style';
+import { defaultStyle, color_grey } from '../../style';
 import Videos from '../../components/videos';
 
 import useSearch from '../../hooks/useSearch';
@@ -52,6 +52,7 @@ export default function App() {
             returnKeyType="search"
             enablesReturnKeyAutomatically={true}
             style={defaultStyle.textInput}
+            placeholderTextColor={color_grey}
             placeholder="Enter your key words"
             value={filter}
             onSubmitEditing={() => setQueryFilter(filter)}

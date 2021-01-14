@@ -6,6 +6,8 @@ import {
   color_secondary,
   color_grey1,
   color_grey,
+  text_primary,
+  text_secondary,
   dockHeight,
   padVal,
   mVal,
@@ -16,10 +18,15 @@ import {
 export default StyleSheet.create({
   itemWrapper: {
     flexDirection: 'row',
-    backgroundColor: color_primary,
-    marginTop: mVal,
-    paddingLeft: padVal,
-    borderRadius: mVal
+    backgroundColor: color_secondary,
+    // marginTop: mVal,
+    // paddingLeft: padVal,
+    // borderRadius: mVal,
+    borderBottomColor: color_grey1,
+    borderBottomWidth: 1
+  },
+  lastItemWrapper: {
+    borderBottomWidth: 0
   },
   thumbnailWrapper: {
     flex: 0.3,
@@ -28,7 +35,7 @@ export default StyleSheet.create({
     // backgroundColor: color_secondary,
   },
   thumbnail: {
-    backgroundColor: color_primary,
+    backgroundColor: color_secondary,
     opacity: 0.8,
     flex: 1,
   },
@@ -52,12 +59,12 @@ export default StyleSheet.create({
   },
   optionItemText: {
     fontSize: primaryFontSize,
-    color: Appearance.getColorScheme() === "light" ? color_black : color_white
+    // color: text_primary
   },
   optionDescription: {
     marginTop: mVal,
     fontSize: secondaryFontSize,
-    color: color_grey,
+    color: text_secondary,
     maxHeight: 50,
   },
   modalWrapper: {

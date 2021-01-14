@@ -11,7 +11,7 @@ import {
   VIEW_CONFIG,
   maxResults,
 } from './constant';
-import { color_secondary, color_primary, dockHeight, titleHeight } from './style';
+import { color_secondary, color_primary, dockHeight, titleHeight, color_white } from './style';
 import SplashScreen from 'react-native-splash-screen';
 
 import Home from './pages/home';
@@ -76,7 +76,7 @@ export default function App() {
             setShowReload,
           }}>
           <SettingContext.Provider value={{ setting, setSetting }}>
-            <View style={styles.title}>
+            <View style={styles.header}>
               <Header />
             </View>
             <View style={styles.workSpace}>
@@ -103,12 +103,12 @@ const styles = StyleSheet.create({
   },
   workSpace: {
     flexGrow: 1,
-    backgroundColor: color_secondary,
+    backgroundColor: color_white,
   },
   dock: {
     height: dockHeight,
   },
-  title: {
+  header: {
     height: titleHeight,
     justifyContent: 'center',
     alignItems: 'center',

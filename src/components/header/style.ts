@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native';
 import {
   color_primary,
   primaryFontSize,
-  color_white,
+  color_secondary,
   padVal,
   titleHeight,
   text_primary
@@ -18,11 +18,11 @@ export default StyleSheet.create({
     width: '100%',
     alignItems: 'center',
     justifyContent: 'flex-end',
-    // marginTop: 10
+    // backgroundColor: color_secondary
   },
   titleText: {
     color: text_primary,
-    fontSize: primaryFontSize,
+    fontSize: primaryFontSize * 1.2,
     fontWeight: '500',
   },
   logoWrapper: {
@@ -42,6 +42,7 @@ export default StyleSheet.create({
     justifyContent: 'center',
     // paddingTop: 5,
     height: titleHeight,
+    // backgroundColor: color_primary
   },
   searchWrapper: {
     right: 0,

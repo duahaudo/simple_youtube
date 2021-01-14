@@ -14,7 +14,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import styles from './style';
 import { FormContext, asyncStorageKey_favourite } from '../../constant';
-import { text_primary, text_secondary, color_pink, color_pink1 } from '../../style';
+import { text_primary, text_secondary, color_pink, color_secondary } from '../../style';
 import { defaultStyle } from '../../style';
 import { reject } from 'lodash';
 import { decode } from 'html-entities';
@@ -116,7 +116,7 @@ export default ({
               setVideo(option);
               context.setIsModalShowed(true);
             }}>
-            <View style={styles.itemWrapper}>
+            <View style={[styles.itemWrapper, idx === options.length - 1 && styles.lastItemWrapper]}>
               <View style={styles.thumbnailWrapper}>
                 <Image
                   style={styles.thumbnail}

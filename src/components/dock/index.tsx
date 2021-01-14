@@ -3,12 +3,13 @@ import { View, Pressable, Text } from 'react-native';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faStar, faCog, faHeart } from '@fortawesome/free-solid-svg-icons';
 import styles from './style';
+import { iconSize } from "../../style";
 
 import {
   FormContext,
   VIEW_FAVOURITE,
   VIEW_TRENDING,
-  VIEW_CONFIG,
+  VIEW_CONFIG
 } from '../../constant';
 
 interface IIcon {
@@ -53,7 +54,7 @@ export default () => {
               context.setShowOverlay(false);
               context.setShowReload(false);
             }}>
-            <FontAwesomeIcon icon={icon.icon} style={style} size={20} />
+            <FontAwesomeIcon icon={icon.icon} style={style} size={iconSize} />
             <Text style={[style, styles.title]}>{icon.title}</Text>
           </Pressable>
         );
