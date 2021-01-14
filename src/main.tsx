@@ -11,7 +11,7 @@ import {
   VIEW_CONFIG,
   maxResults,
 } from './constant';
-import { color_secondary, color_primary, dockHeight, titleHeight, color_white } from './style';
+import { color_secondary, color_primary, dockHeight, titleHeight, color_white, color_grey1 } from './style';
 import SplashScreen from 'react-native-splash-screen';
 
 import Home from './pages/home';
@@ -62,6 +62,8 @@ export default function App() {
 
   return (
     <View style={[styles.unsafeBackground]}>
+      <SafeAreaView style={styles.unsafeBackgroundTop} />
+
       <SafeAreaView style={styles.container}>
         <FormContext.Provider
           value={{
@@ -98,6 +100,13 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
+  unsafeBackground: {
+    flex: 1,
+  },
+  unsafeBackgroundTop: {
+    flex: 0,
+    backgroundColor: color_primary,
+  },
   container: {
     flex: 1,
   },
@@ -106,12 +115,13 @@ const styles = StyleSheet.create({
     backgroundColor: color_white,
   },
   dock: {
-    height: dockHeight,
+    height: dockHeight
   },
   header: {
     height: titleHeight,
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: color_primary,
   },
   overlay: {
     position: 'absolute',
@@ -121,9 +131,5 @@ const styles = StyleSheet.create({
     left: 0,
     backgroundColor: color_primary,
     opacity: 0.3,
-  },
-  unsafeBackground: {
-    backgroundColor: color_primary,
-    flex: 1,
   },
 });
