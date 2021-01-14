@@ -109,6 +109,7 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
+    backgroundColor: `${color_grey1}30`,
   },
   workSpace: {
     flexGrow: 1,

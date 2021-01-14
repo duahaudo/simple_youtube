@@ -14,9 +14,8 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     opacity: 1,
-    backgroundColor: color_secondary,
     borderTopWidth: 1,
-    borderTopColor: color_grey1
+    borderTopColor: `${color_grey1}80`
   },
   icon: {
     color: text_iconMenu
