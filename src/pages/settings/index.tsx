@@ -44,7 +44,7 @@ export default () => {
             keyboardType="number-pad"
             value={setting.setting.maxResults.toString()}
             onChangeText={(val: string) =>
-              saveSetting({ ...setting.setting, maxResults: Number(val) })
+              saveSetting({ ...setting.setting, maxResults: Number(val) !== NaN ? Number(val) : 0 })
             }
           />
         </View>

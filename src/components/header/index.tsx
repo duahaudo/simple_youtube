@@ -18,14 +18,14 @@ const logo = require('../../assets/icons/icon2-1024.png');
 export default () => {
   // @ts-ignore
   const { view, setView } = React.useContext(FormContext);
-  const barStyle = React.useMemo(() => {
-    if (Appearance.getColorScheme() === "light") {
-      return "dark-content"
-    } else if (Appearance.getColorScheme() === "dark") {
-      return "light-content"
-    }
-    return 'default'
-  }, [])
+  // const barStyle = React.useMemo(() => {
+  //   if (Appearance.getColorScheme() === "light") {
+  //     return "dark-content"
+  //   } else if (Appearance.getColorScheme() === "dark") {
+  //     return "light-content"
+  //   }
+  //   return 'default'
+  // }, [])
 
   const [breadcrumbs, setBreadcrumbs] = React.useState<string[]>([])
 
@@ -44,7 +44,7 @@ export default () => {
 
   return (
     <View style={styles.headerWrapper}>
-      <StatusBar barStyle={barStyle} backgroundColor={color_primary} />
+      <StatusBar barStyle={"light-content"} backgroundColor={color_primary} />
       <View style={styles.container}>
         <View style={styles.textWrapper}>
           <View style={styles.logoWrapper}>
