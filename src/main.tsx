@@ -11,7 +11,7 @@ import {
   VIEW_CONFIG,
   maxResults,
 } from './constant';
-import { color_secondary, color_primary, dockHeight, titleHeight, color_white, color_grey1 } from './style';
+import { color_header, color_primary, dockHeight, titleHeight, color_white, color_footer } from './style';
 import SplashScreen from 'react-native-splash-screen';
 
 import Home from './pages/home';
@@ -105,11 +105,11 @@ const styles = StyleSheet.create({
   },
   unsafeBackgroundTop: {
     flex: 0,
-    backgroundColor: color_primary,
+    backgroundColor: color_header,
   },
   container: {
     flex: 1,
-    backgroundColor: `${color_grey1}30`,
+    backgroundColor: color_footer,
   },
   workSpace: {
     flexGrow: 1,

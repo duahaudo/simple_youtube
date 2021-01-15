@@ -5,7 +5,7 @@ import {
   color_secondary,
   padVal,
   titleHeight,
-  text_primary
+  color_text_primary
 } from '../../style';
 
 export default StyleSheet.create({
@@ -21,7 +21,7 @@ export default StyleSheet.create({
     // backgroundColor: color_secondary
   },
   titleText: {
-    color: text_primary,
+    color: color_text_primary,
     fontSize: primaryFontSize * 1.2,
     fontWeight: '500',
   },
@@ -52,6 +52,6 @@ export default StyleSheet.create({
     // backgroundColor: "#000"
   },
   icon: {
-    color: text_primary,
+    color: color_text_primary,
   },
 });

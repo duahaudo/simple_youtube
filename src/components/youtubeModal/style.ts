@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { color_primary, color_black, padVal, text_primary, text_secondary, color_secondary } from '../../style';
+import { color_primary, color_black, padVal, color_text_primary, color_text_secondary, color_secondary } from '../../style';
 
 export default StyleSheet.create({
   container: {
@@ -25,7 +25,7 @@ export default StyleSheet.create({
     justifyContent: 'space-between',
   },
   closeText: {
-    color: text_secondary,
+    color: color_text_secondary,
   },
   titleText: {
     flex: 0.8,
@@ -46,6 +46,6 @@ export default StyleSheet.create({
     // backgroundColor: color_secondary
   },
   descriptionText: {
-    color: text_secondary
+    color: color_text_secondary
   }
 });

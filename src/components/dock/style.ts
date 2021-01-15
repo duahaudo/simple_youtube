@@ -1,4 +1,4 @@
-import { color_secondary, text_primary, text_iconMenu, color_grey1, color_primary } from './../../style';
+import { color_icon_menu_active, color_icon_menu_default, color_grey1, color_primary } from './../../style';
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
@@ -18,13 +18,13 @@ export default StyleSheet.create({
     borderTopColor: `${color_grey1}80`
   },
   icon: {
-    color: text_iconMenu
+    color: color_icon_menu_default
   },
   title: {
     marginTop: 3,
     fontSize: 12
   },
   active: {
-    color: color_primary,
+    color: color_icon_menu_active,
   },
 });

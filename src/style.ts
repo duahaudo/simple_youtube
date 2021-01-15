@@ -30,20 +30,14 @@ function shadeColor(color: string, percent: number): string {
   return "#" + RR + GG + BB;
 }
 
-const mainColor = 'rgb(111, 187, 83)';
+const mainColor = 'rgb(19, 52, 65)';
 const mainTextColor = '#ffffff';
 
-// export const color_primary = Appearance.getColorScheme() === "light" ? 'rgb(242,241,247)' : color_black;
-// export const color_secondary = Appearance.getColorScheme() === "light" ? color_white : 'rgb(34,34,35)';
 export const color_primary = mainColor
 export const color_secondary = color_white
 
-// export const text_primary = Appearance.getColorScheme() === "dark" ? color_white : color_black;
-// export const text_secondary = Appearance.getColorScheme() === "dark" ? color_grey1 : color_grey;
-
-export const text_primary = shadeColor(mainTextColor, 0)
-export const text_secondary = shadeColor(mainTextColor, -40)
-export const text_iconMenu = shadeColor(mainTextColor, -20)
+export const color_text_primary = shadeColor(mainTextColor, 0)
+export const color_text_secondary = shadeColor(mainTextColor, -40)
 
 export const dockHeight = 60;
 export const titleHeight = 50;
@@ -57,6 +51,11 @@ export const bigGreyFontSize = 20;
 export const buttonFontSize = 18;
 export const primaryFontSize = 16;
 export const secondaryFontSize = 14;
+
+export const color_header = color_primary
+export const color_footer = color_primary
+export const color_icon_menu_active = color_white
+export const color_icon_menu_default = shadeColor(mainTextColor, -55)
 
 export const defaultStyle = StyleSheet.create({
   noResultWrapper: {

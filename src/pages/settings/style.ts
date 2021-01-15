@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { text_secondary, secondaryFontSize, mVal } from '../../style';
+import { color_text_secondary, secondaryFontSize, mVal } from '../../style';
 
 export default StyleSheet.create({
   container: {
@@ -22,7 +22,7 @@ export default StyleSheet.create({
     alignItems: 'stretch',
   },
   description: {
-    color: text_secondary,
+    color: color_text_secondary,
     fontSize: secondaryFontSize,
   },
 });

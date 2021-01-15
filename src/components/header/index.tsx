@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { View, Text, Image, Pressable, StatusBar } from 'react-native';
-import { color_primary, iconSize, text_primary, text_iconMenu } from "../../style";
+import { color_primary, iconSize, color_text_primary, text_iconMenu, color_icon_menu_default, color_icon_menu_active } from "../../style";
 import { Appearance } from 'react-native'
 
 import {
@@ -59,7 +59,7 @@ export default () => {
           <Pressable
             style={styles.searchWrapper}
             onPress={searchIconPressHandler}>
-            <FontAwesomeIcon icon={faSearch} style={{ ...styles.icon, color: view === VIEW_HOME ? text_primary : text_iconMenu }} size={iconSize} />
+            <FontAwesomeIcon icon={faSearch} style={{ ...styles.icon, color: view === VIEW_HOME ? color_icon_menu_active : color_icon_menu_default }} size={iconSize} />
           </Pressable>
         </View>
       </View>

@@ -14,7 +14,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import styles from './style';
 import { FormContext, asyncStorageKey_favourite } from '../../constant';
-import { text_primary, text_secondary, color_pink, color_secondary } from '../../style';
+import { color_text_primary, color_text_secondary, color_pink, color_secondary } from '../../style';
 import { defaultStyle } from '../../style';
 import { reject } from 'lodash';
 import { decode } from 'html-entities';
@@ -143,7 +143,7 @@ export default ({
                     <FontAwesomeIcon
                       icon={faHeart}
                       size={18}
-                      color={isExist ? color_pink : text_secondary}
+                      color={isExist ? color_pink : color_text_secondary}
                     />
                   </View>
                 </Pressable>

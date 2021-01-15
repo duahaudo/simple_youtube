@@ -6,8 +6,8 @@ import {
   color_secondary,
   color_grey1,
   color_grey,
-  text_primary,
-  text_secondary,
+  color_text_primary,
+  color_text_secondary,
   dockHeight,
   padVal,
   mVal,
@@ -21,7 +21,7 @@ export default StyleSheet.create({
     backgroundColor: color_secondary,
     // marginTop: mVal,
     // paddingLeft: padVal,
-    // borderRadius: mVal,
+    // borderRadius: mVal * 2,
     borderBottomColor: color_grey1,
     borderBottomWidth: 1
   },
@@ -32,12 +32,12 @@ export default StyleSheet.create({
     flex: 0.3,
     padding: padVal,
     paddingLeft: 0,
-    // backgroundColor: color_secondary,
   },
   thumbnail: {
     backgroundColor: color_secondary,
     opacity: 0.8,
     flex: 1,
+    borderRadius: 10
   },
   optionItems: {
     // backgroundColor: 'red',
@@ -64,7 +64,7 @@ export default StyleSheet.create({
   optionDescription: {
     marginTop: mVal,
     fontSize: secondaryFontSize,
-    color: text_secondary,
+    color: color_text_secondary,
     maxHeight: 50,
   },
   modalWrapper: {
