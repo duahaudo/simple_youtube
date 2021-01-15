@@ -77,7 +77,7 @@ export default ({ video, clearVideoId }: any) => {
 
   React.useEffect(() => {
     if (!!playerRef && !!playerRef.current && video.videoId) {
-      setTimeout(() => {
+      const timeout = setTimeout(() => {
         playerRef.current?.getAvailablePlaybackRates().then(
           (rates: number[]) => setAllPlaybackRate(rates))
 
@@ -87,6 +87,10 @@ export default ({ video, clearVideoId }: any) => {
         // playerRef.current?.getCurrentTime().then(
         //   (currentTime: number) => setCurrentTime(currentTime))
       }, 800)
+
+      return () => {
+        clearTimeout(timeout)
+      }
     }
   }, [playerRef, video.videoId])
 
