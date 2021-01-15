@@ -61,19 +61,19 @@ export default ({ video, clearVideoId }: any) => {
 
   const [allPlaybackRate, setAllPlaybackRate] = useState<number[]>([])
   const [playbackRate, setPlaybackRate] = React.useState(1)
-  const [duration, setDuration] = useState<number | null>(null)
-  const [currentTime, setCurrentTime] = useState<number | null>(null)
-  const [countDown, setCountDown] = useState<string>("")
+  // const [duration, setDuration] = useState<number | null>(null)
+  // const [currentTime, setCurrentTime] = useState<number | null>(null)
+  // const [countDown, setCountDown] = useState<string>("")
 
-  useEffect(() => {
-    if (!!duration && !!currentTime) {
-      let time: number = currentTime;
+  // useEffect(() => {
+  //   if (!!duration && !!currentTime) {
+  //     let time: number = currentTime;
 
-      setInterval(() => {
-        setCountDown(millisecondsToStr(Math.floor(duration - time) * 1000))
-      }, 1000)
-    }
-  }, [duration, currentTime])
+  //     setInterval(() => {
+  //       setCountDown(millisecondsToStr(Math.floor(duration - time) * 1000))
+  //     }, 1000)
+  //   }
+  // }, [duration, currentTime])
 
   React.useEffect(() => {
     if (!!playerRef && !!playerRef.current && video.videoId) {
@@ -81,25 +81,27 @@ export default ({ video, clearVideoId }: any) => {
         playerRef.current?.getAvailablePlaybackRates().then(
           (rates: number[]) => setAllPlaybackRate(rates))
 
-        playerRef.current?.getDuration().then(
-          (duration: number) => setDuration(duration))
+        // playerRef.current?.getDuration().then(
+        //   (duration: number) => setDuration(duration))
 
-        playerRef.current?.getCurrentTime().then(
-          (currentTime: number) => setCurrentTime(currentTime))
+        // playerRef.current?.getCurrentTime().then(
+        //   (currentTime: number) => setCurrentTime(currentTime))
       }, 800)
     }
   }, [playerRef, video.videoId])
 
   const handlePlayButton = React.useCallback(() => {
-    if (!play) {
-      playerRef.current?.getCurrentTime().then(
-        (currentTime: number) => {
-          setPlay(!play);
-          setCurrentTime(currentTime)
-        })
-    } else {
-      setPlay(!play);
-    }
+    setPlay(!play);
+
+    // if (!play) {
+    //   playerRef.current?.getCurrentTime().then(
+    //     (currentTime: number) => {
+    //       setPlay(!play);
+    //       setCurrentTime(currentTime)
+    //     })
+    // } else {
+    //   setPlay(!play);
+    // }
   }, [play])
 
   return (
@@ -145,7 +147,7 @@ export default ({ video, clearVideoId }: any) => {
           </View>
           <View style={styles.playerButtons}>
             <Button icon={play ? faStopCircle : faPlayCircle} {...buttonOptions} onPress={handlePlayButton} />
-            <Button icon={faVolumeDown} {...buttonOptions} onPress={() => setVolume(volume > 0 ? volume - 10 : 0)} />
+            <Button icon={faVolumeDown} {...buttonOptions} onPress={() => setVolume(volume > 10 ? volume - 10 : 0)} />
             <Button icon={faVolumeUp} {...buttonOptions} onPress={() => setVolume(volume < 90 ? volume + 10 : 100)} />
           </View>
           <View style={[styles.playerButtons, styles.playerRateButtons]}>
@@ -157,7 +159,7 @@ export default ({ video, clearVideoId }: any) => {
             })}
           </View>
           <ScrollView style={styles.description}>
-            {play && <Text>- {countDown}</Text>}
+            {/* {play && <Text>- {countDown}</Text>} */}
             <Text style={styles.descriptionText}>{decode(video.description)}</Text>
           </ScrollView>
         </View>
