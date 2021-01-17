@@ -29,7 +29,7 @@ export default (needReload: boolean = false) => {
   // hook to save data
   useSaveItem(asyncStorageItem);
 
-  
+
 
   useEffect(() => {
     if (isLoaded || needReload) {
@@ -86,6 +86,7 @@ export default (needReload: boolean = false) => {
             });
           })
           .catch((error) => {
+            // console.log(Object.keys(error))
             setLoading(false);
             setFetchedData({
               success: false,

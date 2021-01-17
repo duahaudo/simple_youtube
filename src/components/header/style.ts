@@ -31,9 +31,9 @@ export default StyleSheet.create({
     position: 'absolute',
   },
   logo: {
-    width: 30,
-    height: 30,
-    borderRadius: 30,
+    width: 40,
+    height: 40,
+    borderRadius: 40,
   },
   textWrapper: {
     flex: 1,

@@ -13,7 +13,7 @@ import {
   FormContext,
 } from '../../constant';
 import styles from './style';
-const logo = require('../../assets/icons/icon2-1024.png');
+const logo = require('../../assets/icons/icon.png');
 
 export default () => {
   // @ts-ignore
