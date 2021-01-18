@@ -86,11 +86,11 @@ export default (needReload: boolean = false) => {
             });
           })
           .catch((error) => {
-            // console.log(Object.keys(error))
+            console.log(error)
             setLoading(false);
             setFetchedData({
               success: false,
-              message: error.message,
+              message: error,
             });
           });
       } else {
