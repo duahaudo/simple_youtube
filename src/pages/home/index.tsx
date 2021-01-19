@@ -46,23 +46,25 @@ export default function App() {
     <View style={styles.container}>
       {!video && (
         <View style={styles.filterView}>
-          <TextInput
-            ref={inputRef}
-            autoFocus={true}
-            returnKeyType="search"
-            enablesReturnKeyAutomatically={true}
-            style={defaultStyle.textInput}
-            placeholderTextColor={color_grey}
-            placeholder="Enter your key words"
-            value={filter}
-            onSubmitEditing={() => setQueryFilter(filter)}
-            onChangeText={(text) => {
-              setVideo(null);
-              setOptions([]);
-              setFilter(text);
-            }}
-          />
-          {/* <TouchableOpacity
+          <View style={styles.inputBox}>
+            <TextInput
+              ref={inputRef}
+              autoFocus={true}
+              returnKeyType="search"
+              enablesReturnKeyAutomatically={true}
+              style={defaultStyle.textInput}
+              placeholderTextColor={color_grey}
+              placeholder="Enter your key words"
+              value={filter}
+              onSubmitEditing={() => setQueryFilter(filter)}
+              onChangeText={(text) => {
+                setVideo(null);
+                setOptions([]);
+                setFilter(text);
+              }}
+            />
+          </View>
+          <TouchableOpacity
             style={styles.buttonWrapper}
             onPress={() => {
               setQueryFilter(filter);
@@ -77,15 +79,15 @@ export default function App() {
                 ]}>
                 Find
               </Text>
-              {loading && (
+              {/* {loading && (
                 <ActivityIndicator
                   size="small"
                   animating={!!loading}
                   style={styles.spinner}
                 />
-              )}
+              )} */}
             </View>
-          </TouchableOpacity> */}
+          </TouchableOpacity>
         </View>
       )}
 

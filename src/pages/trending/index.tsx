@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './style';
-import {View, Text, ActivityIndicator} from 'react-native';
-import {FormContext} from '../../constant';
-import {defaultStyle} from '../../style';
+import { View, Text, ActivityIndicator } from 'react-native';
+import { FormContext } from '../../constant';
+// import { defaultStyle } from '../../style';
 
 import Videos from '../../components/videos';
 
@@ -25,7 +25,7 @@ export default () => {
   }, [loading, trendingVideos]);
 
   React.useEffect(() => {
-    console.log('context.showReload', context.showReload);
+    // console.log('context.showReload', context.showReload);
 
     if (!context.showReload && videos) {
       context.setShowReload(false);

@@ -30,7 +30,7 @@ export default () => {
   const [breadcrumbs, setBreadcrumbs] = React.useState<string[]>([])
 
   const searchIconPressHandler = React.useCallback(() => {
-    console.log(breadcrumbs)
+    // console.log(breadcrumbs)
 
     if (view === VIEW_HOME) {
       setView(breadcrumbs[0])

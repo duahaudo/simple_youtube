@@ -10,6 +10,7 @@ import {
   VIEW_TRENDING,
   VIEW_CONFIG,
   maxResults,
+  defaultView
 } from './constant';
 import { color_header, color_primary, dockHeight, titleHeight, color_white, color_footer } from './style';
 import SplashScreen from 'react-native-splash-screen';
@@ -29,7 +30,7 @@ import { Appearance } from 'react-native'
 // console.log(SplashScreen)
 
 export default function App() {
-  const [view, setView] = useState(VIEW_TRENDING);
+  const [view, setView] = useState(defaultView);
   const [isModalShowed, setIsModalShowed] = useState(false);
   const [showReload, setShowReload] = useState(false);
   const [isLoaded1, savedFavourites] = useReadItem(asyncStorageKey_favourite);
@@ -57,7 +58,7 @@ export default function App() {
   React.useEffect(() => {
     SplashScreen.hide();
 
-    console.log(Appearance.getColorScheme())
+    // console.log(Appearance.getColorScheme())
   }, [])
 
   return (

@@ -1,6 +1,5 @@
-import { mVal, buttonFontSize } from './../../style';
+import { mVal, buttonFontSize, padVal, color_primary, color_grey1, color_grey, color_white } from './../../style';
 import { StyleSheet } from 'react-native';
-import { color_grey1, color_grey, color_white } from '../../style';
 
 export default StyleSheet.create({
   container: {
@@ -9,15 +8,19 @@ export default StyleSheet.create({
     // backgroundColor: "#DC143C"
   },
   filterView: {
-    // backgroundColor: 'yellow',
     marginBottom: 10,
     flexGrow: 0,
+    flexDirection: "row"
+  },
+  inputBox: {
+    flexGrow: 1,
+    paddingRight: padVal
   },
   buttonWrapper: {
-    backgroundColor: color_grey,
+    backgroundColor: color_primary,
     borderRadius: 5,
-    marginTop: 10,
-    paddingVertical: 5,
+    paddingHorizontal: padVal * 2,
+    justifyContent: "center"
   },
   button: {
     paddingTop: 3,
@@ -36,5 +39,5 @@ export default StyleSheet.create({
   },
   spinner: {
     marginLeft: mVal,
-  },
+  }
 });
