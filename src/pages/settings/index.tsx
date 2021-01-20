@@ -22,7 +22,7 @@ export default () => {
     // save to storage
     setAsyncStorageItem({
       ...asyncStorageItem,
-      value: { ...newSetting },
+      data: { ...newSetting },
     });
   }, []);
 

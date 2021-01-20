@@ -49,7 +49,7 @@ export default (needReload: boolean = false) => {
 
     setAsyncStorageItem({
       ...asyncStorageItem,
-      value: {
+      data: {
         timestamp: moment().toISOString(),
         data: trendingData,
       },

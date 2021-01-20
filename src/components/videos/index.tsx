@@ -80,7 +80,7 @@ export default ({
       // save to storage
       setAsyncStorageItem({
         ...asyncStorageItem,
-        value: newFavourites,
+        data: newFavourites,
       });
     },
     [context, favourites],

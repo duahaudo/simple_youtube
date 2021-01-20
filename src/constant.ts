@@ -18,5 +18,6 @@ export const asyncStorageKey_favourite = 'asyncStorageKey_favourite';
 export const asyncStorageKey_trending = 'asyncStorageKey_trending';
 export const asyncStorageKey_setting = 'asyncStorageKey_setting';
 export const asyncStorageKey_region = 'asyncStorageKey_region';
+export const asyncStorageKey_searchResult = 'asyncStorageKey_Result';
 
 export const maxResults = 25;
